@@ -1,0 +1,45 @@
+---
+const services = [
+  'Brand Identity',
+  'Web Design',
+  'Print Design',
+  'Packaging Design',
+  'UI/UX Design',
+  'Illustration',
+];
+---
+
+<section class="w-full py-12 md:py-24 lg:py-32" id="about">
+  <div class="container px-4 md:px-6 mx-auto text-center">
+    <h2
+      class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-4"
+    >
+      About Us
+    </h2>
+    <p
+      class="max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400 mb-8 mx-auto"
+    >
+      We're a team of passionate designers dedicated to creating impactful
+      visual solutions. With over a decade of experience, we blend creativity
+      with strategy to deliver designs that resonate and perform.
+    </p>
+    <h3
+      class="text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl mb-4"
+    >
+      Our Services
+    </h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {
+        services.map((service) => (
+          <div class="p-4 border rounded-lg">
+            <h4 class="font-semibold mb-2">{service}</h4>
+            <p class="text-sm text-gray-500">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Doloribus, aut.
+            </p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
