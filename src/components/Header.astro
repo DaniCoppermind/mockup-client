@@ -1,35 +1,79 @@
 <header class="px-4 mx-auto lg:px-6">
-  <div class="mx-auto mb-8 lg:mb-16 flex items-center justify-between">
+  <div class="mx-auto flex items-center justify-between">
+    <!-- Logo -->
     <a href="/" class="flex">
-      <img src="/logo.svg" alt="Betsbrand Logo" class="h-16 w-16">
+      <img src="/logo.svg" alt="Betsbrand Logo" class="h-16 w-16" />
       <span class="sr-only">Designer Name</span>
     </a>
-    <nav class="flex gap-4 sm:gap-6">
+
+    <!-- Mobile -->
+    <div class="lg:hidden">
+      <button id="menu-toggle" class="text-gray-500 focus:outline-none">
+        <svg
+          class="w-8 h-8"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <nav id="nav-menu" class="hidden lg:flex gap-4 sm:gap-6">
       <a
-      class='text-sm font-medium hover:underline underline-offset-4'
-      href='#about'
-    >
-      About
-    </a>
-    <a
-      class='text-sm font-medium hover:underline underline-offset-4'
-      href='#services'
-    >
-      Services
-    </a>
-    <a
-      class='text-sm font-medium hover:underline underline-offset-4'
-      href='#portfolio'
-    >
-      Portfolio
-    </a>
-    <a
-      class='text-sm font-medium hover:underline underline-offset-4'
-      href='#contact'
-    >
-      Contact
-    </a>
-  </nav>
+        class="text-sm font-medium hover:underline underline-offset-4"
+        href="#about">About</a
+      >
+      <a
+        class="text-sm font-medium hover:underline underline-offset-4"
+        href="#testimonials">Testimonials</a
+      >
+      <a
+        class="text-sm font-medium hover:underline underline-offset-4"
+        href="#portfolio">Portfolio</a
+      >
+      <a
+        class="text-sm font-medium hover:underline underline-offset-4"
+        href="#contact">Contact</a
+      >
     </nav>
   </div>
+
+  <!-- Mobile -->
+  <nav
+    id="mobile-menu"
+    class="text-right lg:hidden hidden flex-col gap-4 mt-4 bg-gray-100 p-6 rounded-lg shadow-lg"
+  >
+    <a
+      class="block text-base font-semibold text-gray-800 hover:text-blue-500 transition-colors duration-300"
+      href="#about">About</a
+    >
+    <a
+      class="block text-base font-semibold text-gray-800 hover:text-blue-500 transition-colors duration-300"
+      href="#portfolio">Portfolio</a
+    >
+    <a
+      class="block text-base font-semibold text-gray-800 hover:text-blue-500 transition-colors duration-300"
+      href="#testimonials">Testimonials</a
+    >
+    <a
+      class="block text-base font-semibold text-gray-800 hover:text-blue-500 transition-colors duration-300"
+      href="#contact">Contact</a
+    >
+  </nav>
 </header>
+
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  menuToggle?.addEventListener('click', () => {
+    mobileMenu?.classList.toggle('hidden');
+  });
+</script>
